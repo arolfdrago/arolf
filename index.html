@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Listening & Communication - I AFM (DSA Friendly)</title>
+    <!-- Tailwind CSS per styling responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome per icone accessibili con alto contrasto -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font Atkinson Hyperlegible specifico per DSA/Dislessia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* BASE ACCESSIBILITÀ & DSA STYLE RULES */
+        body {
+            font-family: 'Atkinson Hyperlegible', system-ui, -apple-system, sans-serif;
+            background-color: #FAF7F2; /* Sfondo crema per ridurre l'abbagliamento e l'affaticamento visivo */
+            color: #1E293B;
+            letter-spacing: 0.03em; /* Spaziatura ampliata tra le lettere per DSA */
+            line-height: 1.75;
+        }
+
+        /* Pulsanti e touch target ampi */
+        .btn-touch {
+            min-height: 52px;
+            min-width: 52px;
+            font-size: 1.05rem;
+        }
+
+        /* Evidenziatori e Badge per Parole Chiave (DSA High Contrast Chips) */
+        .kw-yellow {
+            background-color: #FEF08A;
+            color: #713F12;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            display: inline-block;
+            margin: 1px 2px;
+            border: 1px solid #FDE047;
+        }
+        .kw-blue {
+            background-color: #BAE6FD;
+            color: #0C4A6E;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            display: inline-block;
+            margin: 1px 2px;
+            border: 1px solid #7DD3FC;
+        }
+        .kw-green {
+            background-color: #BBF7D0;
+            color: #14532D;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            display: inline-block;
+            margin: 1px 2px;
+            border: 1px solid #86EFAC;
+        }
+        .kw-orange {
+            background-color: #FFEDD5;
+            color: #7C2D12;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            display: inline-block;
+            margin: 1px 2px;
+            border: 1px solid #FDBA74;
+        }
+        .kw-purple {
+            background-color: #E9D5FF;
+            color: #581C87;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            display: inline-block;
+            margin: 1px 2px;
+            border: 1px solid #D8B4FE;
+        }
+
+        /* Scrollbars morbide */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1EBE4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 6px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94A3B8;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- HEADER ACCESSIBILE AD ALTO CONTRASTO -->
+    <header class="bg-indigo-900 text-white shadow-lg sticky top-0 z-50 border-b-4 border-amber-400">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="bg-amber-400 text-indigo-950 p-2.5 rounded-xl text-xl font-bold flex items-center justify-center">
+                    <i class="fa-solid fa-ear-listen"></i>
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-lg md:text-xl tracking-wide">Listen & Respond!</h1>
+                    <p class="text-xs text-amber-200 font-medium">Inglese I AFM • Formato DSA & Alta Leggibilità</p>
+                </div>
+            </div>
+            <nav class="flex space-x-2">
+                <button onclick="switchTab('scopri')" id="tab-scopri" class="px-4 py-2.5 rounded-xl font-bold text-sm transition-all bg-indigo-950 text-amber-300 border-2 border-amber-400 shadow-sm btn-touch">
+                    <i class="fa-solid fa-book-open mr-1.5"></i> Scopri
+                </button>
+                <button onclick="switchTab('sfida')" id="tab-sfida" class="px-4 py-2.5 rounded-xl font-bold text-sm transition-all bg-indigo-800 text-white hover:bg-indigo-700 border-2 border-transparent btn-touch">
+                    <i class="fa-solid fa-trophy mr-1.5 text-yellow-300"></i> Sfida
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="max-w-5xl mx-auto px-4 py-6 flex-grow w-full">
+
+        <!-- ================= SECTION: SCOPRI ================= -->
+        <section id="sec-scopri" class="space-y-6">
+            <div class="bg-amber-50/80 p-5 rounded-2xl border-2 border-amber-200 shadow-sm">
+                <h2 class="text-2xl font-black text-indigo-950 mb-2 flex items-center">
+                    <i class="fa-solid fa-eye text-amber-600 mr-2.5"></i> Sezione "Scopri": Schede didattiche con Parole Chiave
+                </h2>
+                <p class="text-slate-700 text-base font-medium">
+                    Consulta le <strong>7 schede concettuali</strong>. Le <span class="kw-yellow">PAROLE CHIAVE</span> sono evidenziate con colori dedicati per facilitare la memoria visiva e la lettura dislessia-friendly.
+                </p>
+            </div>
+
+            <!-- SCHEDE SCOPRI GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- CARD 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border-l-8 border-indigo-600 space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <span class="bg-indigo-900 text-amber-300 text-xs font-black px-3 py-1 rounded-full">CARD 1</span>
+                        <h3 class="font-black text-xl text-indigo-950">Height & Build (Altezza e Corporatura)</h3>
+                    </div>
+                    <p class="text-sm text-slate-700 font-medium">Per descrivere la statura e la corporatura usa il verbo <strong>to be</strong> (essere):</p>
+                    <ul class="space-y-2 text-sm text-slate-800 bg-amber-50/50 p-4 rounded-xl border border-amber-200">
+                        <li><span class="kw-yellow">tall</span> = alto/a | <span class="kw-yellow">short</span> = basso/a</li>
+                        <li><span class="kw-yellow">medium height</span> = di altezza media</li>
+                        <li><span class="kw-blue">slim / thin</span> = magro/a, snello/a</li>
+                        <li><span class="kw-blue">average build</span> = corporatura media</li>
+                        <li><span class="kw-blue">plump / chubby</span> = robusto/a, paffuto/a</li>
+                    </ul>
+                    <div class="text-xs bg-indigo-50 p-3 rounded-xl text-indigo-950 font-bold border border-indigo-100">
+                        <i class="fa-solid fa-comment-dots text-indigo-600 mr-1.5"></i> Esempio: "He is <span class="kw-yellow">tall</span> and <span class="kw-blue">slim</span>." (Lui è alto e snello).
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border-l-8 border-sky-600 space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <span class="bg-sky-900 text-sky-200 text-xs font-black px-3 py-1 rounded-full">CARD 2</span>
+                        <h3 class="font-black text-xl text-indigo-950">Hair, Eyes & Complexion</h3>
+                    </div>
+                    <p class="text-sm text-slate-700 font-medium">Usa <strong>have got / has got</strong> per occhi e capelli. Usa <strong>to be</strong> per la pelle:</p>
+                    <ul class="space-y-2 text-sm text-slate-800 bg-sky-50/50 p-4 rounded-xl border border-sky-200">
+                        <li><strong>Hair (Capelli):</strong> <span class="kw-yellow">blonde / fair</span> (biondi), <span class="kw-yellow">dark / brown</span> (scuri/castani), <span class="kw-orange">straight</span> (lisci), <span class="kw-orange">curly</span> (ricci), <span class="kw-orange">wavy</span> (mossi).</li>
+                        <li><strong>Eyes (Occhi):</strong> <span class="kw-green">blue</span>, <span class="kw-green">green</span>, <span class="kw-green">brown</span>, <span class="kw-green">hazel</span> (nocciola).</li>
+                        <li><strong>Skin (Pelle):</strong> <span class="kw-purple">fair skin / complexion</span> (chiara), <span class="kw-purple">dark / tanned skin</span> (scura/abbronzata).</li>
+                    </ul>
+                    <div class="text-xs bg-sky-50 p-3 rounded-xl text-sky-950 font-bold border border-sky-100">
+                        <i class="fa-solid fa-comment-dots text-sky-600 mr-1.5"></i> Esempio: "She has got <span class="kw-orange">curly</span> <span class="kw-yellow">blonde</span> hair and <span class="kw-green">green</span> eyes."
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border-l-8 border-emerald-600 space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <span class="bg-emerald-900 text-emerald-200 text-xs font-black px-3 py-1 rounded-full">CARD 3</span>
+                        <h3 class="font-black text-xl text-indigo-950">Interests & Hobbies (Interessi)</h3>
+                    </div>
+                    <p class="text-sm text-slate-700 font-medium">Verbi ed espressioni di gradimento + forma <strong>-ING</strong> o sostantivo:</p>
+                    <ul class="space-y-2 text-sm text-slate-800 bg-emerald-50/50 p-4 rounded-xl border border-emerald-200">
+                        <li><span class="kw-green">like / love / enjoy</span> = piacere / amare / divertirsi a...</li>
+                        <li><span class="kw-green">interested in</span> = interessato/a a... (<em>"interested IN tech"</em>)</li>
+                        <li><span class="kw-green">keen on</span> = appassionato/a di... (<em>"keen ON sports"</em>)</li>
+                        <li><span class="kw-green">fond of</span> = affezionato/a a / amante di...</li>
+                        <li><span class="kw-orange">hate / can't stand</span> = odiare / non sopportare...</li>
+                    </ul>
+                    <div class="text-xs bg-emerald-50 p-3 rounded-xl text-emerald-950 font-bold border border-emerald-100">
+                        <i class="fa-solid fa-comment-dots text-emerald-600 mr-1.5"></i> Esempio: "I am <span class="kw-green">keen on</span> swimming, but I <span class="kw-orange">hate</span> video games."
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border-l-8 border-amber-500 space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <span class="bg-amber-950 text-amber-300 text-xs font-black px-3 py-1 rounded-full">CARD 4</span>
+                        <h3 class="font-black text-xl text-indigo-950">School & Subjects (Materie AFM)</h3>
+                    </div>
+                    <p class="text-sm text-slate-700 font-medium">Vocabolario della scuola e degli insegnanti:</p>
+                    <ul class="space-y-2 text-sm text-slate-800 bg-amber-50/50 p-4 rounded-xl border border-amber-200">
+                        <li><strong>Materie:</strong> <span class="kw-yellow">Economics</span> (Economia), <span class="kw-yellow">Law</span> (Diritto), <span class="kw-yellow">Maths</span>, <span class="kw-yellow">ICT</span> (Informatica), <span class="kw-yellow">PE</span> (Ed. Fisica).</li>
+                        <li><strong>Preferita:</strong> "My <span class="kw-green">favorite subject</span> is Economics."</li>
+                        <li><strong>Professori:</strong> <span class="kw-blue">strict</span> (severo/a), <span class="kw-blue">kind</span> (gentile), <span class="kw-blue">clear</span> (chiaro/a).</li>
+                    </ul>
+                    <div class="text-xs bg-amber-100/60 p-3 rounded-xl text-amber-950 font-bold border border-amber-200">
+                        <i class="fa-solid fa-comment-dots text-amber-700 mr-1.5"></i> Esempio: "My <span class="kw-yellow">Law</span> teacher is <span class="kw-blue">strict</span> but very <span class="kw-blue">kind</span>."
+                    </div>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border-l-8 border-rose-500 space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <span class="bg-rose-900 text-rose-200 text-xs font-black px-3 py-1 rounded-full">CARD 5</span>
+                        <h3 class="font-black text-xl text-indigo-950">Family & Best Friend (Famiglia & Amici)</h3>
+                    </div>
+                    <p class="text-sm text-slate-700 font-medium">Parlare dei membri della famiglia e del migliore amico/a:</p>
+                    <ul class="space-y-2 text-sm text-slate-800 bg-rose-50/50 p-4 rounded-xl border border-rose-200">
+                        <li><strong>Famiglia:</strong> <span class="kw-purple">parents</span> (genitori), <span class="kw-purple">brother / sister</span>, <span class="kw-purple">an only child</span> (figlio/a unico/a).</li>
+                        <li><strong>Migliore amico/a:</strong> <span class="kw-yellow">best friend</span> (mio/a migliore amico/a).</li>
+                        <li><strong>Carattere:</strong> <span class="kw-green">funny</span> (divertente), <span class="kw-green">friendly</span> (simpatico/a), <span class="kw-green">helpful</span> (disponibile/di aiuto).</li>
+                    </ul>
+                    <div class="text-xs bg-rose-50 p-3 rounded-xl text-rose-950 font-bold border border-rose-100">
+                        <i class="fa-solid fa-comment-dots text-rose-600 mr-1.5"></i> Esempio: "My <span class="kw-yellow">best friend</span> is very <span class="kw-green">funny</span> and <span class="kw-green">helpful</span>."
+                    </div>
+                </div>
+
+                <!-- CARD 6 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border-l-8 border-purple-600 space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <span class="bg-purple-900 text-purple-200 text-xs font-black px-3 py-1 rounded-full">CARD 6</span>
+                        <h3 class="font-black text-xl text-indigo-950">Greetings & Personal Info</h3>
+                    </div>
+                    <p class="text-sm text-slate-700 font-medium">Frasi essenziali per presentarsi:</p>
+                    <ul class="space-y-2 text-sm text-slate-800 bg-purple-50/50 p-4 rounded-xl border border-purple-200">
+                        <li><span class="kw-yellow">Hello / Hi, my name is...</span> = Ciao, il mio nome è...</li>
+                        <li><span class="kw-green">Nice to meet you!</span> = Piacere di conoscerti!</li>
+                        <li><span class="kw-blue">I am 14/15 years old</span> = Ho 14/15 anni (Usa il verbo BE!).</li>
+                        <li><span class="kw-purple">I live in... / I come from...</span> = Vivo a... / Vengo da...</li>
+                    </ul>
+                    <div class="text-xs bg-purple-50 p-3 rounded-xl text-purple-950 font-bold border border-purple-100">
+                        <i class="fa-solid fa-comment-dots text-purple-600 mr-1.5"></i> Esempio: "<span class="kw-yellow">Hello!</span> <span class="kw-blue">I am 14 years old</span> and <span class="kw-purple">I live in</span> Matera."
+                    </div>
+                </div>
+
+                <!-- CARD 7 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border-l-8 border-teal-600 space-y-3 col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3">
+                        <span class="bg-teal-900 text-teal-200 text-xs font-black px-3 py-1 rounded-full">CARD 7</span>
+                        <h3 class="font-black text-xl text-indigo-950">Asking Questions (Domande Personali)</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+                        <div class="bg-teal-50/60 p-3.5 rounded-xl border border-teal-200">
+                            <span class="kw-yellow text-xs">What do you look like?</span>
+                            <p class="text-xs text-slate-700 mt-1 font-medium">Chiede la tua descrizione fisica (altezza, occhi, capelli).</p>
+                        </div>
+                        <div class="bg-teal-50/60 p-3.5 rounded-xl border border-teal-200">
+                            <span class="kw-green text-xs">What's your favorite subject?</span>
+                            <p class="text-xs text-slate-700 mt-1 font-medium">Chiede qual è la tua materia scolastica preferita.</p>
+                        </div>
+                        <div class="bg-teal-50/60 p-3.5 rounded-xl border border-teal-200">
+                            <span class="kw-blue text-xs">Who is your best friend?</span>
+                            <p class="text-xs text-slate-700 mt-1 font-medium">Chiede chi è il tuo migliore amico o amica.</p>
+                        </div>
+                        <div class="bg-teal-50/60 p-3.5 rounded-xl border border-teal-200">
+                            <span class="kw-purple text-xs">How many people in family?</span>
+                            <p class="text-xs text-slate-700 mt-1 font-medium">Chiede da quante persone è composta la tua famiglia.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ACTION BUTTON TO SFIDA -->
+            <div class="text-center pt-4">
+                <button onclick="switchTab('sfida')" class="bg-indigo-900 hover:bg-indigo-800 text-amber-300 font-extrabold py-4 px-10 rounded-2xl text-xl shadow-lg border-2 border-amber-400 transition-all btn-touch inline-flex items-center space-x-3">
+                    <span>Pronto per la prova? Vai alla Sfida!</span>
+                    <i class="fa-solid fa-circle-arrow-right text-2xl text-amber-400"></i>
+                </button>
+            </div>
+        </section>
+
+
+        <!-- ================= SECTION: SFIDA ================= -->
+        <section id="sec-sfida" class="hidden space-y-6">
+
+            <!-- SETUP CONFIGURATION PANEL -->
+            <div id="quiz-setup" class="bg-white p-6 md:p-8 rounded-3xl shadow-md border-2 border-slate-200 max-w-xl mx-auto space-y-6">
+                <div class="text-center space-y-2">
+                    <h2 class="text-3xl font-black text-indigo-950">Configura la tua Sfida</h2>
+                    <p class="text-base text-slate-600 font-medium">Scegli il livello di difficoltà e attiva o disattiva il timer prima di iniziare.</p>
+                </div>
+
+                <div class="space-y-5">
+                    <!-- Livello Difficoltà -->
+                    <div>
+                        <label class="block text-sm font-bold text-slate-800 mb-2">Seleziona Livello di Difficoltà:</label>
+                        <select id="select-level" class="w-full p-4 border-2 border-slate-300 rounded-2xl focus:ring-4 focus:ring-indigo-300 font-bold text-indigo-950 text-base">
+                            <option value="all">Tutti i Livelli (28 domande - Completo)</option>
+                            <option value="easy">Facile (Easy - 8 domande)</option>
+                            <option value="medium">Intermedio (Medium - 10 domande)</option>
+                            <option value="hard">Avanzato (Hard - 10 domande)</option>
+                        </select>
+                    </div>
+
+                    <!-- Attivazione Timer -->
+                    <div class="bg-amber-50 p-4 rounded-2xl border-2 border-amber-200 flex items-center justify-between">
+                        <div>
+                            <span class="font-bold text-slate-900 block text-base">Timer di Risposta</span>
+                            <span class="text-xs text-slate-600 font-medium">40 secondi di tempo per ogni domanda</span>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" id="toggle-timer" class="sr-only peer" checked>
+                            <div class="w-14 h-8 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-indigo-800"></div>
+                        </label>
+                    </div>
+
+                    <button onclick="startChallenge()" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-extrabold py-4 rounded-2xl text-xl shadow-lg border-2 border-emerald-900 transition-all btn-touch flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-play text-xl"></i>
+                        <span>Inizia la Sfida</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ACTIVE QUIZ CONTAINER -->
+            <div id="quiz-container" class="hidden space-y-6">
+                
+                <!-- TOP BAR STATS -->
+                <div class="bg-white p-4 rounded-2xl shadow-sm border-2 border-slate-200 flex flex-wrap justify-between items-center gap-4">
+                    <div class="flex items-center space-x-3">
+                        <span id="badge-level" class="px-3.5 py-1.5 bg-indigo-900 text-amber-300 text-xs font-black rounded-full uppercase tracking-wider">EASY</span>
+                        <span id="quiz-progress-text" class="text-base font-extrabold text-slate-800">Domanda 1 di 28</span>
+                    </div>
+
+                    <!-- TIMER DISPLAY -->
+                    <div id="timer-box" class="flex items-center space-x-2 bg-amber-100 text-amber-950 px-4 py-1.5 rounded-xl border-2 border-amber-300 font-black">
+                        <i class="fa-solid fa-clock text-amber-700"></i>
+                        <span id="timer-count" class="text-lg">40s</span>
+                    </div>
+
+                    <div class="flex items-center space-x-4 text-base font-black">
+                        <span class="text-emerald-700 bg-emerald-100 px-3 py-1 rounded-xl border border-emerald-300"><i class="fa-solid fa-check text-emerald-700"></i> <span id="score-correct">0</span></span>
+                        <span class="text-rose-700 bg-rose-100 px-3 py-1 rounded-xl border border-rose-300"><i class="fa-solid fa-xmark text-rose-700"></i> <span id="score-wrong">0</span></span>
+                    </div>
+                </div>
+
+                <!-- PROGRESS BAR -->
+                <div class="w-full bg-slate-200 h-3.5 rounded-full overflow-hidden border border-slate-300">
+                    <div id="progress-bar-inner" class="bg-indigo-800 h-full w-0 transition-all duration-300"></div>
+                </div>
+
+                <!-- QUESTION CARD -->
+                <div class="bg-white p-6 md:p-8 rounded-3xl shadow-md border-2 border-slate-200 space-y-6">
+
+                    <!-- AUDIO PLAYER BOX -->
+                    <div class="bg-indigo-900 text-white p-5 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 border-2 border-indigo-950">
+                        <div class="flex items-center space-x-4">
+                            <button onclick="playAudio(1.0)" class="bg-amber-400 hover:bg-amber-300 text-indigo-950 rounded-full w-16 h-16 flex items-center justify-center shadow-lg transition-transform transform active:scale-95 btn-touch border-2 border-amber-500" title="Ascolta Audio">
+                                <i class="fa-solid fa-volume-high text-2xl"></i>
+                            </button>
+                            <button onclick="playAudio(0.8)" class="bg-indigo-800 hover:bg-indigo-700 text-amber-200 rounded-xl px-4 py-2.5 text-xs font-bold transition-colors btn-touch border border-indigo-700" title="Ascolta Lento">
+                                <i class="fa-solid fa-turtle mr-1.5 text-amber-300"></i> Lento (0.8x)
+                            </button>
+                            <div>
+                                <h4 class="font-extrabold text-white text-base">Ascolta l'audio in inglese</h4>
+                                <p class="text-xs text-indigo-200 font-medium">Clicca sul pulsante giallo per ascoltare la traccia.</p>
+                            </div>
+                        </div>
+
+                        <!-- SUBTITLE TOGGLE -->
+                        <button onclick="toggleTranscript()" class="text-xs text-amber-300 hover:text-amber-200 font-bold underline btn-touch">
+                            <i class="fa-solid fa-closed-captioning mr-1"></i> <span id="transcript-btn-text">Mostra Testo</span>
+                        </button>
+                    </div>
+
+                    <!-- TRANSCRIPT DISPLAY -->
+                    <div id="transcript-box" class="hidden p-4 bg-amber-50 border-l-8 border-indigo-800 rounded-r-2xl text-base font-bold text-slate-800">
+                        <span class="font-black text-xs text-indigo-900 uppercase block mb-1">Trascrizione Audio:</span>
+                        "<span id="transcript-text">...</span>"
+                    </div>
+
+                    <!-- QUESTION TEXT -->
+                    <div class="space-y-2">
+                        <h3 id="question-text" class="text-xl md:text-2xl font-black text-slate-900 leading-snug">
+                            Caricamento domanda...
+                        </h3>
+                    </div>
+
+                    <!-- ANSWER AREA -->
+                    <div id="answer-area" class="space-y-3 pt-2">
+                        <!-- Generato dinamicamente via JS -->
+                    </div>
+
+                    <!-- FEEDBACK BOX -->
+                    <div id="feedback-box" class="hidden p-5 rounded-2xl space-y-3 border-2">
+                        <div class="flex items-center space-x-3 font-black text-xl" id="feedback-status">
+                            <!-- Popolato da JS -->
+                        </div>
+                        <p id="feedback-explanation" class="text-base text-slate-800 font-medium leading-relaxed"></p>
+                        <div id="feedback-hint-box" class="hidden bg-white/80 p-4 rounded-xl border border-slate-300 text-sm space-y-2">
+                            <span class="font-extrabold text-indigo-950 block"><i class="fa-solid fa-lightbulb text-amber-500 mr-1.5"></i> Suggerimento per il ripasso:</span>
+                            <p id="feedback-hint" class="text-slate-800 font-medium"></p>
+                            <button onclick="openCardFromHint()" class="mt-2 text-indigo-900 font-black underline hover:text-indigo-700 text-sm inline-block">
+                                <i class="fa-solid fa-book-open mr-1"></i> Apri la scheda di ripasso in "Scopri"
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ACTION BUTTONS -->
+                    <div class="flex justify-between items-center pt-4 border-t-2 border-slate-200">
+                        <span id="attempt-count" class="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-300">Tentativi rimasti: 2/2</span>
+                        <div class="space-x-3">
+                            <button id="btn-submit" onclick="checkAnswer()" class="bg-indigo-900 hover:bg-indigo-800 text-amber-300 font-extrabold px-8 py-3 rounded-xl shadow border-2 border-amber-400 transition-colors btn-touch">
+                                Conferma <i class="fa-solid fa-check ml-1.5"></i>
+                            </button>
+                            <button id="btn-next" onclick="nextQuestion()" class="hidden bg-emerald-700 hover:bg-emerald-800 text-white font-extrabold px-8 py-3 rounded-xl shadow border-2 border-emerald-900 transition-colors btn-touch">
+                                Prossima <i class="fa-solid fa-arrow-right ml-1.5"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- SUMMARY / END SCREEN -->
+            <div id="quiz-summary" class="hidden bg-white p-6 md:p-8 rounded-3xl shadow-md border-2 border-slate-200 max-w-2xl mx-auto space-y-6">
+                <div class="text-center space-y-3">
+                    <div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-amber-100 text-amber-700 text-5xl border-4 border-amber-400 mb-2">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h2 class="text-3xl font-black text-indigo-950">Sfida Completata!</h2>
+                    <p class="text-slate-600 text-base font-medium">Ecco il riepilogo finale delle tue risposte e del tuo apprendimento.</p>
+                </div>
+
+                <!-- SCORE STATS GRID -->
+                <div class="grid grid-cols-3 gap-4 text-center">
+                    <div class="bg-amber-50 p-4 rounded-2xl border-2 border-amber-300">
+                        <span class="block text-xs font-black text-amber-900 uppercase">Punteggio</span>
+                        <span id="summary-score" class="text-3xl font-black text-indigo-950">0%</span>
+                    </div>
+                    <div class="bg-emerald-50 p-4 rounded-2xl border-2 border-emerald-300">
+                        <span class="block text-xs font-black text-emerald-900 uppercase">Corrette ✓</span>
+                        <span id="summary-correct" class="text-3xl font-black text-emerald-700">0</span>
+                    </div>
+                    <div class="bg-rose-50 p-4 rounded-2xl border-2 border-rose-300">
+                        <span class="block text-xs font-black text-rose-900 uppercase">Errate ✗</span>
+                        <span id="summary-wrong" class="text-3xl font-black text-rose-700">0</span>
+                    </div>
+                </div>
+
+                <!-- ERRORS RECAP SECTION -->
+                <div id="summary-errors-section" class="space-y-3 pt-2">
+                    <h3 class="font-black text-indigo-950 text-lg flex items-center">
+                        <i class="fa-solid fa-rotate-left text-amber-600 mr-2"></i> Riepilogo Domande da Ripassare:
+                    </h3>
+                    <div id="summary-errors-list" class="space-y-3 max-h-64 overflow-y-auto pr-2">
+                        <!-- Popolato dinamicamente da JS -->
+                    </div>
+                </div>
+
+                <!-- RESTART BUTTONS -->
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <button onclick="switchTab('scopri')" class="w-full bg-slate-200 hover:bg-slate-300 text-slate-900 font-extrabold py-4 rounded-2xl transition-colors btn-touch border-2 border-slate-400">
+                        <i class="fa-solid fa-book-open mr-2"></i> Torna a Scopri
+                    </button>
+                    <button onclick="resetChallenge()" class="w-full bg-indigo-900 hover:bg-indigo-800 text-amber-300 font-extrabold py-4 rounded-2xl shadow border-2 border-amber-400 transition-colors btn-touch">
+                        <i class="fa-solid fa-rotate-right mr-2"></i> Nuova Sfida
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER ACCESSIBILE -->
+    <footer class="bg-indigo-950 text-white border-t-4 border-amber-400 py-4 mt-8">
+        <div class="max-w-5xl mx-auto px-4 text-center text-xs font-medium text-amber-200 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <span>App Didattica di Inglese - Progetto I AFM (Integrazione DSA & Accessibilità Visiva)</span>
+            <span>Font: Atkinson Hyperlegible</span>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        /* ================= DATABASE DOMANDE (28 QUESTIONS WITH HIGHLIGHTED KEYWORDS) ================= */
+        const QUESTIONS_DB = [
+            {
+                id: 1,
+                level: "easy",
+                cardRef: 1,
+                audioText: "Hi! I'm Mark. I'm tall and slim. I have blue eyes and short brown hair.",
+                question: "Quali caratteristiche descrivono <span class='kw-yellow'>Mark</span> nell'ascolto?",
+                type: "multiple-choice",
+                options: [
+                    "Basso, robusto, occhi verdi e capelli lunghi",
+                    "Alto, magro, occhi blu e capelli corti castani",
+                    "Altezza media, magro, occhi neri e calvo",
+                    "Alto, paffuto, occhi marroni e capelli ricci"
+                ],
+                correctAnswer: 1,
+                explanation: "Mark dice: 'tall' (alto), 'slim' (magro), 'blue eyes' (occhi blu) e 'short brown hair' (capelli corti castani).",
+                hint: "Ricorda: 'tall' = alto, 'slim' = magro (Vedi CARD 1)."
+            },
+            {
+                id: 2,
+                level: "easy",
+                cardRef: 2,
+                audioText: "My sister has got long curly blonde hair.",
+                question: "Ascolta e inserisci l'aggettivo mancante per i capelli: 'She has got long <span class='kw-orange'>_____</span> blonde hair.'",
+                type: "fill-blank",
+                correctAnswer: "curly",
+                explanation: "L'aggettivo pronunciato per i capelli ricci è 'curly'.",
+                hint: "Per indicare i capelli ricci si usa la parola 'curly' (CARD 2)."
+            },
+            {
+                id: 3,
+                level: "easy",
+                cardRef: 3,
+                audioText: "Hi, I'm Sarah. In my free time, I really enjoy playing tennis and reading books.",
+                question: "Quali sono gli <span class='kw-green'>hobby</span> di Sarah?",
+                type: "multiple-choice",
+                options: [
+                    "Nuotare e ascoltare musica",
+                    "Giocare a tennis e leggere libri",
+                    "Cucinare e guardare la TV",
+                    "Giocare ai videogiochi e ballare"
+                ],
+                correctAnswer: 1,
+                explanation: "Sarah dice: 'I enjoy playing tennis and reading books'.",
+                hint: "Ascolta le azioni: 'playing tennis' e 'reading books' (CARD 3)."
+            },
+            {
+                id: 4,
+                level: "easy",
+                cardRef: 6,
+                audioText: "Nice to meet you!",
+                question: "Riordina la risposta corretta in italiano per l'espressione ascoltata:",
+                type: "reorder",
+                words: ["conoscerti", "Piacere", "di"],
+                correctOrder: ["Piacere", "di", "conoscerti"],
+                explanation: "'Nice to meet you!' significa 'Piacere di conoscerti!'.",
+                hint: "Formola di cortesia standard vista nella CARD 6."
+            },
+            {
+                id: 5,
+                level: "easy",
+                cardRef: 7,
+                audioText: "What do you look like?",
+                question: "A cosa si riferisce la domanda <span class='kw-yellow'>'What do you look like?'</span>?",
+                type: "multiple-choice",
+                options: [
+                    "Alla tua nazionalità e provenienza",
+                    "Ai tuoi hobby nel tempo libero",
+                    "Alla descrizione del tuo aspetto fisico",
+                    "Alla tua età"
+                ],
+                correctAnswer: 2,
+                explanation: "'What do you look like?' serve a chiedere la descrizione fisica (CARD 7).",
+                hint: "Chiede l'aspetto fisico (altezza, capelli, occhi)."
+            },
+            {
+                id: 6,
+                level: "easy",
+                cardRef: 4,
+                audioText: "My favorite subject at school is Economics.",
+                question: "Qual è la <span class='kw-yellow'>materia preferita</span> dello studente?",
+                type: "multiple-choice",
+                options: [
+                    "Matematica (Maths)",
+                    "Economia (Economics)",
+                    "Diritto (Law)",
+                    "Educazione Fisica (PE)"
+                ],
+                correctAnswer: 1,
+                explanation: "Lo studente dice: 'My favorite subject at school is Economics' (Economia).",
+                hint: "Vedi CARD 4 sulle materie scolastiche."
+            },
+            {
+                id: 7,
+                level: "easy",
+                cardRef: 5,
+                audioText: "There are four people in my family: my parents, my brother and me.",
+                question: "Da quante persone è composta la <span class='kw-purple'>famiglia</span> nell'audio?",
+                type: "multiple-choice",
+                options: [
+                    "3 persone",
+                    "4 persone",
+                    "5 persone",
+                    "È figlio unico"
+                ],
+                correctAnswer: 1,
+                explanation: "L'audio dice: 'There are four people in my family'.",
+                hint: "Ascolta il numero: 'four' = quattro (CARD 5)."
+            },
+            {
+                id: 8,
+                level: "easy",
+                cardRef: 5,
+                audioText: "My best friend is named Alex. He is very friendly and funny.",
+                question: "Scrivi l'aggettivo inglese per dire che il <span class='kw-yellow'>miglior amico</span> è <span class='kw-green'>'divertente'</span>:",
+                type: "fill-blank",
+                correctAnswer: "funny",
+                explanation: "L'aggettivo pronunciato per divertente è 'funny'.",
+                hint: "'funny' = divertente / simpatico (CARD 5)."
+            },
+            {
+                id: 9,
+                level: "medium",
+                cardRef: 2,
+                audioText: "Hello, I'm David. I have a fair complexion, hazel eyes, and straight black hair.",
+                question: "Di che colore ha gli occhi <span class='kw-yellow'>David</span> e com'è la sua <span class='kw-purple'>carnagione</span>?",
+                type: "multiple-choice",
+                options: [
+                    "Occhi neri e carnagione scura",
+                    "Occhi nocciola e carnagione chiara",
+                    "Occhi azzurri e carnagione abbronzata",
+                    "Occhi marroni e carnagione pallida"
+                ],
+                correctAnswer: 1,
+                explanation: "'Hazel' significa nocciola e 'fair complexion' significa carnagione chiara.",
+                hint: "Consulta la CARD 2 per 'hazel' e 'fair complexion'."
+            },
+            {
+                id: 10,
+                level: "medium",
+                cardRef: 3,
+                audioText: "I am very keen on swimming and playing video games.",
+                question: "Inserisci la preposizione corretta: 'I am very keen <span class='kw-green'>_____</span> swimming.'",
+                type: "fill-blank",
+                correctAnswer: "on",
+                explanation: "L'espressione di interesse corretta è 'keen ON'.",
+                hint: "L'aggettivo 'keen' si lega alla preposizione 'on' (CARD 3)."
+            },
+            {
+                id: 11,
+                level: "medium",
+                cardRef: 1,
+                audioText: "I am short and average build.",
+                question: "Riordina la traduzione corretta in italiano per la descrizione ascoltata:",
+                type: "reorder",
+                words: ["basso", "Sono", "corporatura", "di", "media", "e"],
+                correctOrder: ["Sono", "basso", "e", "di", "corporatura", "media"],
+                explanation: "'Short' = basso, 'average build' = corporatura media.",
+                hint: "CARD 1: 'short' (basso) e 'average build' (corporatura media)."
+            },
+            {
+                id: 12,
+                level: "medium",
+                cardRef: 4,
+                audioText: "I really dislike Maths because I think it is very difficult.",
+                question: "Cosa pensa lo studente della <span class='kw-yellow'>Matematica</span>?",
+                type: "multiple-choice",
+                options: [
+                    "La adora perché è facile",
+                    "Non le piace (dislike) perché è molto difficile",
+                    "È la sua materia preferita",
+                    "Vorrebbe più ore di lezione"
+                ],
+                correctAnswer: 1,
+                explanation: "'dislike' = non piacere, 'difficult' = difficile (CARD 4).",
+                hint: "Ascolta le parole 'dislike' e 'difficult'."
+            },
+            {
+                id: 13,
+                level: "medium",
+                cardRef: 4,
+                audioText: "My Law teacher is strict, but she is very clear and kind.",
+                question: "Come viene descritta l'insegnante di <span class='kw-yellow'>Diritto (Law)</span>?",
+                type: "multiple-choice",
+                options: [
+                    "Noiosa e in ritardo",
+                    "Severa (strict), ma molto chiara e gentile",
+                    "Troppo giovane",
+                    "Molto severa ed ingiusta"
+                ],
+                correctAnswer: 1,
+                explanation: "'strict' = severa, 'kind' = gentile (CARD 4).",
+                hint: "Vedi la CARD 4 per gli aggettivi degli insegnanti."
+            },
+            {
+                id: 14,
+                level: "medium",
+                cardRef: 5,
+                audioText: "I live with my mother, my father, and my grandmother. I don't have any brothers or sisters.",
+                question: "Cosa si deduce sulla <span class='kw-purple'>famiglia</span> dell'ascoltatore?",
+                type: "multiple-choice",
+                options: [
+                    "Ha due fratelli ed una sorella",
+                    "È un figlio unico (an only child) e vive con la nonna",
+                    "Vive solo con il padre",
+                    "Ha 5 fratelli"
+                ],
+                correctAnswer: 1,
+                explanation: "Dice di vivere con madre, padre e nonna, e aggiunge 'I don't have any brothers or sisters' (figlio unico).",
+                hint: "CARD 5: 'don't have any brothers or sisters' = only child."
+            },
+            {
+                id: 15,
+                level: "medium",
+                cardRef: 7,
+                audioText: "How old are you and where are you from?",
+                question: "Quali due informazioni vengono chieste nell'audio?",
+                type: "multiple-choice",
+                options: [
+                    "Nome e cognome",
+                    "Altezza e colore degli occhi",
+                    "Età e paese/città di provenienza",
+                    "Hobby e materia preferita"
+                ],
+                correctAnswer: 2,
+                explanation: "'How old are you?' chiede l'età; 'Where are you from?' chiede la provenienza.",
+                hint: "CARD 7: domande personali di identificazione."
+            },
+            {
+                id: 16,
+                level: "medium",
+                cardRef: 2,
+                audioText: "My friend Tom has got green eyes and wavy dark hair.",
+                question: "Traduci in italiano l'aggettivo per i capelli <span class='kw-orange'>'wavy'</span>:",
+                type: "fill-blank",
+                correctAnswer: "mossi",
+                explanation: "'Wavy' significa 'mossi'.",
+                hint: "Capelli: 'straight' (lisci), 'curly' (ricci), 'wavy' (mossi)."
+            },
+            {
+                id: 17,
+                level: "medium",
+                cardRef: 1,
+                audioText: "Hi! I'm 15 years old. I'm medium height with a dark complexion.",
+                question: "Com'è la <span class='kw-yellow'>statura</span> e la <span class='kw-purple'>carnagione</span> della persona?",
+                type: "multiple-choice",
+                options: [
+                    "Molto alta e con pelle chiara",
+                    "Bassa e con pelle chiara",
+                    "Altezza media e carnagione scura/olivastra",
+                    "Bassa e con capelli biondi"
+                ],
+                correctAnswer: 2,
+                explanation: "'Medium height' = altezza media; 'dark complexion' = carnagione scura/olivastra.",
+                hint: "CARD 1 e CARD 2."
+            },
+            {
+                id: 18,
+                level: "medium",
+                cardRef: 5,
+                audioText: "My best friend's name is Giulia. We are in the same class in 1st AFM.",
+                question: "Cosa condividono la parlante e la sua <span class='kw-yellow'>migliore amica Giulia</span>?",
+                type: "multiple-choice",
+                options: [
+                    "Fanno sport insieme",
+                    "Sono compagne di classe nella 1ª AFM",
+                    "Sono cugine",
+                    "Abitano nello stesso palazzo"
+                ],
+                correctAnswer: 1,
+                explanation: "'same class in 1st AFM' = stessa classe in 1ª AFM.",
+                hint: "Ascolta le parole 'same class in 1st AFM' (CARD 5)."
+            },
+            {
+                id: 19,
+                level: "hard",
+                cardRef: 3,
+                audioText: "What are your main interests and hobbies?",
+                question: "Riordina la frase inglese: <span class='kw-green'>'Sono interessato alla tecnologia'</span>:",
+                type: "reorder",
+                words: ["interested", "I", "technology", "in", "am"],
+                correctOrder: ["I", "am", "interested", "in", "technology"],
+                explanation: "La struttura corretta è: Soggetto (I) + am + interested + in + technology.",
+                hint: "CARD 3: regola 'interested IN'."
+            },
+            {
+                id: 20,
+                level: "hard",
+                cardRef: 4,
+                audioText: "I love Information Technology, but I hate studying History.",
+                question: "Riordina le parole della frase pronunciata sulle materie:",
+                type: "reorder",
+                words: ["I", "love", "ICT", "hate", "History", "but", "I"],
+                correctOrder: ["I", "love", "ICT", "but", "I", "hate", "History"],
+                explanation: "Contrappone ciò che ama ('love ICT') a ciò che odia ('hate History').",
+                hint: "Vedi CARD 3 e 4 per 'love' vs 'hate'."
+            },
+            {
+                id: 21,
+                level: "hard",
+                cardRef: 1,
+                audioText: "My cousin Anna is plump with dark brown eyes and long straight hair. She is fond of playing volleyball.",
+                question: "Quale descrizione corrisponde esattamente ad <span class='kw-yellow'>Anna</span>?",
+                type: "multiple-choice",
+                options: [
+                    "Magra, occhi azzurri, capelli ricci, ama la pallavolo.",
+                    "Robusta, occhi marroni scuri, capelli lunghi lisci, appassionata di pallavolo.",
+                    "Altezza media, occhi verdi, capelli corti, ama il tennis.",
+                    "Bassa, occhi nocciola, capelli lisci biondi, ama nuotare."
+                ],
+                correctAnswer: 1,
+                explanation: "'Plump' = robusta, 'dark brown eyes' = occhi marroni scuri, 'straight hair' = capelli lisci, 'fond of' = appassionata di.",
+                hint: "CARD 1, 2 e 3: ricompila tutti i dettagli ascoltati."
+            },
+            {
+                id: 22,
+                level: "hard",
+                cardRef: 7,
+                audioText: "What does your English teacher look like?",
+                question: "Inserisci l'ausiliare mancante per la 3ª persona: 'What <span class='kw-purple'>_____</span> your teacher look like?'",
+                type: "fill-blank",
+                correctAnswer: "does",
+                explanation: "Nelle domande al Present Simple per la 3ª persona si usa 'does'.",
+                hint: "Regola grammaticale Present Simple: ausiliare DOES."
+            },
+            {
+                id: 23,
+                level: "hard",
+                cardRef: 5,
+                audioText: "My brother is older than me. He is 18 years old and he is very helpful when I do my homework.",
+                question: "Com'è il <span class='kw-purple'>fratello</span> di chi parla?",
+                type: "multiple-choice",
+                options: [
+                    "Più piccolo ed ha 10 anni",
+                    "Più grande (18 anni) e molto disponibile (helpful) con i compiti",
+                    "Un insegnante di scuola",
+                    "Pigro e poco collaborativo"
+                ],
+                correctAnswer: 1,
+                explanation: "'older than me' = più grande di me; 'helpful' = disponibile/di aiuto.",
+                hint: "CARD 5 per gli aggettivi sui familiari."
+            },
+            {
+                id: 24,
+                level: "hard",
+                cardRef: 2,
+                audioText: "Alex is tall with a tanned complexion, while Leo is short with fair skin.",
+                question: "Quale associazione tra <span class='kw-yellow'>Alex</span> e <span class='kw-blue'>Leo</span> è corretta?",
+                type: "multiple-choice",
+                options: [
+                    "Alex è basso e chiaro; Leo è alto e abbronzato.",
+                    "Alex è alto con carnagione abbronzata; Leo è basso con pelle chiara.",
+                    "Entrambi sono alti e con pelle chiara.",
+                    "Alex ha i capelli biondi e Leo ha gli occhi azzurri."
+                ],
+                correctAnswer: 1,
+                explanation: "Alex = tall + tanned (abbronzato); Leo = short + fair skin (pelle chiara).",
+                hint: "CARD 1 e CARD 2."
+            },
+            {
+                id: 25,
+                level: "hard",
+                cardRef: 3,
+                audioText: "I'm not really into sports. I prefer playing chess and drawing.",
+                question: "Cosa significa <span class='kw-orange'>'I'm not really into sports'</span>?",
+                type: "multiple-choice",
+                options: [
+                    "Che è un atleta professionista",
+                    "Che non gli interessano molto gli sport",
+                    "Che pratica sport tutti i giorni",
+                    "Che non sa giocare a scacchi"
+                ],
+                correctAnswer: 1,
+                explanation: "'Not into' è una forma negativa per dire che un argomento non interessa.",
+                hint: "Vedi CARD 3 per le espressioni negative."
+            },
+            {
+                id: 26,
+                level: "hard",
+                cardRef: 2,
+                audioText: "She has got blue eyes.",
+                question: "Riordina la frase inglese ascoltata:",
+                type: "reorder",
+                words: ["got", "blue", "eyes", "has", "She"],
+                correctOrder: ["She", "has", "got", "blue", "eyes"],
+                explanation: "Struttura corretta: Soggetto + has got + colore occhi + eyes.",
+                hint: "L'aggettivo del colore precede il sostantivo 'eyes' (CARD 2)."
+            },
+            {
+                id: 27,
+                level: "hard",
+                cardRef: 3,
+                audioText: "I am interested in economics and social media management.",
+                question: "Completa con la preposizione corretta: 'I am interested <span class='kw-green'>_____</span> economics.'",
+                type: "fill-blank",
+                correctAnswer: "in",
+                explanation: "L'aggettivo 'interested' si costruisce sempre con la preposizione 'IN'.",
+                hint: "CARD 3: 'interested IN'."
+            },
+            {
+                id: 28,
+                level: "hard",
+                cardRef: 6,
+                audioText: "Hello everybody! I'm Marco. I'm tall, I have dark wavy hair and brown eyes. My favorite subject is Law and I love hiking with my best friend.",
+                question: "Quale profilo sintetizza esattamente <span class='kw-yellow'>Marco</span>?",
+                type: "multiple-choice",
+                options: [
+                    "Marco: basso, capelli biondi lisci, occhi azzurri, adora la Matematica.",
+                    "Marco: alto, capelli scuri mossi, occhi marroni, ama la materia Diritto (Law) ed fare escursioni col migliore amico.",
+                    "Marco: corporatura media, calvo, occhi neri.",
+                    "Marco: alto, capelli ricci biondi, occhi verdi."
+                ],
+                correctAnswer: 1,
+                explanation: "Marco = tall, dark wavy hair, brown eyes, ama 'Law' e fare escursioni col suo migliore amico.",
+                hint: "Riascolta tutti i dettagli forniti nell'audio (CARD 1-6)."
+            }
+        ];
+
+        /* ================= STATE MANAGEMENT ================= */
+        let activeQuestions = [];
+        let currentIndex = 0;
+        let scoreCorrect = 0;
+        let scoreWrong = 0;
+        let attemptsLeft = 2;
+        let userErrors = [];
+        let timerInterval = null;
+        let timerSeconds = 40;
+        let timerEnabled = true;
+        let selectedReorderWords = [];
+
+        /* ================= NAVIGATION & TAB SWITCHING ================= */
+        function switchTab(tab) {
+            const secScopri = document.getElementById('sec-scopri');
+            const secSfida = document.getElementById('sec-sfida');
+            const tabScopri = document.getElementById('tab-scopri');
+            const tabSfida = document.getElementById('tab-sfida');
+
+            if (tab === 'scopri') {
+                secScopri.classList.remove('hidden');
+                secSfida.classList.add('hidden');
+                tabScopri.className = "px-4 py-2.5 rounded-xl font-bold text-sm transition-all bg-indigo-950 text-amber-300 border-2 border-amber-400 shadow-sm btn-touch";
+                tabSfida.className = "px-4 py-2.5 rounded-xl font-bold text-sm transition-all bg-indigo-800 text-white hover:bg-indigo-700 border-2 border-transparent btn-touch";
+            } else {
+                secScopri.classList.add('hidden');
+                secSfida.classList.remove('hidden');
+                tabSfida.className = "px-4 py-2.5 rounded-xl font-bold text-sm transition-all bg-indigo-950 text-amber-300 border-2 border-amber-400 shadow-sm btn-touch";
+                tabScopri.className = "px-4 py-2.5 rounded-xl font-bold text-sm transition-all bg-indigo-800 text-white hover:bg-indigo-700 border-2 border-transparent btn-touch";
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function openCardFromHint() {
+            switchTab('scopri');
+        }
+
+        /* ================= AUDIO SYNTHESIS (TTS) ================= */
+        function playAudio(rate = 1.0) {
+            if (!('speechSynthesis' in window)) {
+                alert("Il tuo browser non supporta la sintesi vocale audio. Usa la trascrizione testo.");
+                return;
+            }
+            window.speechSynthesis.cancel();
+            const q = activeQuestions[currentIndex];
+            if (!q) return;
+
+            const utterance = new SpeechSynthesisUtterance(q.audioText);
+            utterance.lang = 'en-US';
+            utterance.rate = rate;
+
+            const voices = window.speechSynthesis.getVoices();
+            const enVoice = voices.find(v => v.lang.startsWith('en'));
+            if (enVoice) utterance.voice = enVoice;
+
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function toggleTranscript() {
+            const box = document.getElementById('transcript-box');
+            const btnText = document.getElementById('transcript-btn-text');
+            if (box.classList.contains('hidden')) {
+                box.classList.remove('hidden');
+                btnText.textContent = "Nascondi Testo";
+            } else {
+                box.classList.add('hidden');
+                btnText.textContent = "Mostra Testo";
+            }
+        }
+
+        /* ================= GAME LOGIC ================= */
+        function startChallenge() {
+            const levelSelect = document.getElementById('select-level').value;
+            timerEnabled = document.getElementById('toggle-timer').checked;
+
+            if (levelSelect === 'all') {
+                activeQuestions = [...QUESTIONS_DB];
+            } else {
+                activeQuestions = QUESTIONS_DB.filter(q => q.level === levelSelect);
+            }
+
+            currentIndex = 0;
+            scoreCorrect = 0;
+            scoreWrong = 0;
+            userErrors = [];
+
+            document.getElementById('quiz-setup').classList.add('hidden');
+            document.getElementById('quiz-summary').classList.add('hidden');
+            document.getElementById('quiz-container').classList.remove('hidden');
+
+            document.getElementById('score-correct').textContent = '0';
+            document.getElementById('score-wrong').textContent = '0';
+
+            loadQuestion();
+        }
+
+        function resetChallenge() {
+            document.getElementById('quiz-container').classList.add('hidden');
+            document.getElementById('quiz-summary').classList.add('hidden');
+            document.getElementById('quiz-setup').classList.remove('hidden');
+            clearInterval(timerInterval);
+        }
+
+        function loadQuestion() {
+            clearInterval(timerInterval);
+            attemptsLeft = 2;
+            selectedReorderWords = [];
+
+            const q = activeQuestions[currentIndex];
+
+            document.getElementById('badge-level').textContent = q.level.toUpperCase();
+            document.getElementById('quiz-progress-text').textContent = `Domanda ${currentIndex + 1} di ${activeQuestions.length}`;
+            
+            const progressPercent = ((currentIndex) / activeQuestions.length) * 100;
+            document.getElementById('progress-bar-inner').style.width = `${progressPercent}%`;
+
+            document.getElementById('question-text').innerHTML = q.question;
+            document.getElementById('transcript-text').textContent = q.audioText;
+            document.getElementById('transcript-box').classList.add('hidden');
+            document.getElementById('transcript-btn-text').textContent = "Mostra Testo";
+
+            const feedbackBox = document.getElementById('feedback-box');
+            feedbackBox.className = "hidden p-5 rounded-2xl space-y-3 border-2";
+            document.getElementById('feedback-hint-box').classList.add('hidden');
+
+            document.getElementById('attempt-count').textContent = `Tentativi rimasti: ${attemptsLeft}/2`;
+            document.getElementById('btn-submit').classList.remove('hidden');
+            document.getElementById('btn-next').classList.add('hidden');
+
+            renderAnswerArea(q);
+
+            const timerBox = document.getElementById('timer-box');
+            if (timerEnabled) {
+                timerBox.classList.remove('hidden');
+                timerSeconds = 40;
+                document.getElementById('timer-count').textContent = `${timerSeconds}s`;
+                timerInterval = setInterval(() => {
+                    timerSeconds--;
+                    document.getElementById('timer-count').textContent = `${timerSeconds}s`;
+                    if (timerSeconds <= 0) {
+                        clearInterval(timerInterval);
+                        handleTimeout();
+                    }
+                }, 1000);
+            } else {
+                timerBox.classList.add('hidden');
+            }
+
+            setTimeout(() => playAudio(1.0), 300);
+        }
+
+        function renderAnswerArea(q) {
+            const area = document.getElementById('answer-area');
+            area.innerHTML = '';
+
+            if (q.type === 'multiple-choice') {
+                q.options.forEach((opt, idx) => {
+                    const btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'mc-option w-full text-left p-4 rounded-2xl border-2 border-slate-300 hover:border-indigo-600 bg-white font-bold text-slate-900 transition-all flex items-center justify-between btn-touch shadow-sm';
+                    btn.onclick = () => selectMcOption(idx);
+                    btn.innerHTML = `
+                        <span>${opt}</span>
+                        <div class="radio-icon w-6 h-6 rounded-full border-2 border-slate-400 flex items-center justify-center shrink-0"></div>
+                    `;
+                    btn.dataset.index = idx;
+                    area.appendChild(btn);
+                });
+            } else if (q.type === 'fill-blank') {
+                const container = document.createElement('div');
+                container.className = 'space-y-2';
+                container.innerHTML = `
+                    <label class="block text-xs font-black text-slate-600 uppercase">Scrivi qui la tua risposta:</label>
+                    <input type="text" id="input-fill" class="w-full p-4 border-2 border-slate-300 rounded-2xl focus:border-indigo-600 focus:outline-none font-bold text-xl text-indigo-950 bg-white" placeholder="Scrivi qui..." autocomplete="off">
+                `;
+                area.appendChild(container);
+            } else if (q.type === 'reorder') {
+                const container = document.createElement('div');
+                container.className = 'space-y-4';
+                
+                const shuffledWords = [...q.words].sort(() => Math.random() - 0.5);
+
+                container.innerHTML = `
+                    <div class="space-y-1">
+                        <span class="text-xs font-black text-slate-600 uppercase">La tua frase raggruppata:</span>
+                        <div id="reorder-result" class="min-h-[64px] p-3 border-2 border-dashed border-indigo-400 rounded-2xl bg-indigo-50/60 flex flex-wrap gap-2 items-center">
+                            <span class="text-xs text-slate-500 font-bold italic">Clicca sulle parole in basso per ordinarle...</span>
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <span class="text-xs font-black text-slate-600 uppercase">Parole disponibili:</span>
+                        <div id="reorder-pool" class="flex flex-wrap gap-2.5"></div>
+                    </div>
+                `;
+                area.appendChild(container);
+
+                const pool = document.getElementById('reorder-pool');
+                shuffledWords.forEach((word) => {
+                    const wBtn = document.createElement('button');
+                    wBtn.type = 'button';
+                    wBtn.className = 'word-chip bg-white border-2 border-slate-300 hover:border-indigo-600 px-4 py-2.5 rounded-xl font-bold text-slate-900 shadow-sm transition-all btn-touch text-base';
+                    wBtn.textContent = word;
+                    wBtn.onclick = () => toggleWordChip(word, wBtn);
+                    pool.appendChild(wBtn);
+                });
+            }
+        }
+
+        let selectedMcIdx = null;
+        function selectMcOption(idx) {
+            selectedMcIdx = idx;
+            document.querySelectorAll('.mc-option').forEach(btn => {
+                if (parseInt(btn.dataset.index) === idx) {
+                    btn.className = 'mc-option w-full text-left p-4 rounded-2xl border-4 border-indigo-900 bg-indigo-50 font-black text-indigo-950 transition-all flex items-center justify-between btn-touch shadow-sm';
+                    btn.querySelector('.radio-icon').className = 'radio-icon w-6 h-6 rounded-full bg-indigo-900 border-2 border-indigo-900 flex items-center justify-center text-amber-300 text-xs shrink-0';
+                    btn.querySelector('.radio-icon').innerHTML = '<i class="fa-solid fa-check"></i>';
+                } else {
+                    btn.className = 'mc-option w-full text-left p-4 rounded-2xl border-2 border-slate-300 hover:border-indigo-600 bg-white font-bold text-slate-900 transition-all flex items-center justify-between btn-touch shadow-sm';
+                    btn.querySelector('.radio-icon').className = 'radio-icon w-6 h-6 rounded-full border-2 border-slate-400 flex items-center justify-center shrink-0';
+                    btn.querySelector('.radio-icon').innerHTML = '';
+                }
+            });
+        }
+
+        function toggleWordChip(word, btnEl) {
+            const resultBox = document.getElementById('reorder-result');
+            
+            if (selectedReorderWords.length === 0) {
+                resultBox.innerHTML = '';
+            }
+
+            const existingIdx = selectedReorderWords.indexOf(word);
+            if (existingIdx > -1) {
+                selectedReorderWords.splice(existingIdx, 1);
+                btnEl.classList.remove('opacity-30', 'pointer-events-none');
+            } else {
+                selectedReorderWords.push(word);
+                btnEl.classList.add('opacity-30', 'pointer-events-none');
+            }
+
+            resultBox.innerHTML = '';
+            if (selectedReorderWords.length === 0) {
+                resultBox.innerHTML = '<span class="text-xs text-slate-500 font-bold italic">Clicca sulle parole in basso per ordinarle...</span>';
+            } else {
+                selectedReorderWords.forEach(w => {
+                    const chip = document.createElement('span');
+                    chip.className = 'bg-indigo-900 text-amber-300 font-extrabold px-3.5 py-1.5 rounded-xl text-base shadow border border-amber-400';
+                    chip.textContent = w;
+                    resultBox.appendChild(chip);
+                });
+            }
+        }
+
+        function handleTimeout() {
+            showFeedback(false, "Tempo scaduto! Non hai inviato la risposta entro i 40 secondi previsti.");
+            registerError();
+        }
+
+        function checkAnswer() {
+            const q = activeQuestions[currentIndex];
+            let isCorrect = false;
+
+            if (q.type === 'multiple-choice') {
+                if (selectedMcIdx === null) {
+                    alert("Seleziona una delle opzioni prima di procedere!");
+                    return;
+                }
+                isCorrect = (selectedMcIdx === q.correctAnswer);
+            } else if (q.type === 'fill-blank') {
+                const inputVal = document.getElementById('input-fill').value.trim().toLowerCase();
+                if (!inputVal) {
+                    alert("Scrivi la risposta prima di procedere!");
+                    return;
+                }
+                isCorrect = (inputVal === q.correctAnswer.toLowerCase());
+            } else if (q.type === 'reorder') {
+                if (selectedReorderWords.length !== q.correctOrder.length) {
+                    alert("Ordina tutte le parole prima di procedere!");
+                    return;
+                }
+                isCorrect = (JSON.stringify(selectedReorderWords) === JSON.stringify(q.correctOrder));
+            }
+
+            if (isCorrect) {
+                clearInterval(timerInterval);
+                scoreCorrect++;
+                document.getElementById('score-correct').textContent = scoreCorrect;
+                showFeedback(true, q.explanation);
+            } else {
+                attemptsLeft--;
+                document.getElementById('attempt-count').textContent = `Tentativi rimasti: ${attemptsLeft}/2`;
+
+                if (attemptsLeft > 0) {
+                    showFeedback(false, "Risposta errata. Riascolta l'audio e prova ancora!", true);
+                } else {
+                    clearInterval(timerInterval);
+                    scoreWrong++;
+                    document.getElementById('score-wrong').textContent = scoreWrong;
+                    showFeedback(false, q.explanation, false);
+                    registerError();
+                }
+            }
+        }
+
+        function registerError() {
+            const q = activeQuestions[currentIndex];
+            if (!userErrors.some(e => e.id === q.id)) {
+                userErrors.push(q);
+            }
+        }
+
+        function showFeedback(isSuccess, message, canRetry = false) {
+            const q = activeQuestions[currentIndex];
+            const feedbackBox = document.getElementById('feedback-box');
+            const statusEl = document.getElementById('feedback-status');
+            const explanationEl = document.getElementById('feedback-explanation');
+            const hintBox = document.getElementById('feedback-hint-box');
+            const hintEl = document.getElementById('feedback-hint');
+
+            feedbackBox.classList.remove('hidden');
+
+            if (isSuccess) {
+                feedbackBox.className = "p-5 rounded-2xl space-y-3 bg-emerald-100 border-4 border-emerald-500 text-emerald-950";
+                statusEl.className = "flex items-center space-x-2 font-black text-2xl text-emerald-800";
+                statusEl.innerHTML = '<span class="text-3xl text-emerald-700">✓</span> <span>Risposta Corretta!</span>';
+                hintBox.classList.add('hidden');
+
+                document.getElementById('btn-submit').classList.add('hidden');
+                document.getElementById('btn-next').classList.remove('hidden');
+            } else {
+                feedbackBox.className = "p-5 rounded-2xl space-y-3 bg-rose-100 border-4 border-rose-500 text-rose-950";
+                statusEl.className = "flex items-center space-x-2 font-black text-2xl text-rose-800";
+                statusEl.innerHTML = '<span class="text-3xl text-rose-700">✗</span> <span>Risposta Errata</span>';
+
+                if (canRetry) {
+                    hintBox.classList.remove('hidden');
+                    hintEl.textContent = q.hint;
+                } else {
+                    hintBox.classList.remove('hidden');
+                    hintEl.textContent = q.hint;
+                    document.getElementById('btn-submit').classList.add('hidden');
+                    document.getElementById('btn-next').classList.remove('hidden');
+                }
+            }
+
+            explanationEl.textContent = message;
+        }
+
+        function nextQuestion() {
+            selectedMcIdx = null;
+            currentIndex++;
+            if (currentIndex < activeQuestions.length) {
+                loadQuestion();
+            } else {
+                finishChallenge();
+            }
+        }
+
+        function finishChallenge() {
+            clearInterval(timerInterval);
+            document.getElementById('quiz-container').classList.add('hidden');
+            document.getElementById('quiz-summary').classList.remove('hidden');
+
+            const total = activeQuestions.length;
+            const percentage = Math.round((scoreCorrect / total) * 100);
+
+            document.getElementById('summary-score').textContent = `${percentage}%`;
+            document.getElementById('summary-correct').textContent = scoreCorrect;
+            document.getElementById('summary-wrong').textContent = scoreWrong;
+
+            const errorsList = document.getElementById('summary-errors-list');
+            errorsList.innerHTML = '';
+
+            if (userErrors.length === 0) {
+                errorsList.innerHTML = '<p class="text-base text-emerald-800 font-extrabold bg-emerald-100 p-4 rounded-xl border border-emerald-300">Nessun errore commesso! Eccellente!</p>';
+            } else {
+                userErrors.forEach((err) => {
+                    const item = document.createElement('div');
+                    item.className = 'p-4 bg-amber-50 border-2 border-amber-300 rounded-2xl space-y-1.5 text-sm';
+                    item.innerHTML = `
+                        <div class="flex justify-between items-center font-black text-slate-900">
+                            <span>Domanda ${err.id} (${err.level.toUpperCase()})</span>
+                            <span class="text-indigo-900 font-bold bg-amber-200 px-2 py-0.5 rounded">Vedi Card ${err.cardRef}</span>
+                        </div>
+                        <p class="text-slate-800 font-bold">${err.question}</p>
+                        <p class="text-rose-900 font-bold">Spiegazione: ${err.explanation}</p>
+                    `;
+                    errorsList.appendChild(item);
+                });
+            }
+        }
+
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.onvoiceschanged = () => {
+                window.speechSynthesis.getVoices();
+            };
+        }
+    </script>
+</body>
+</html>
+```
+
+### Caratteristiche principali introdotte per l'Accessibilità e la DSA:
+1. **Palette Cromatiche Defaticanti e DSA-Friendly**: Il fondo dell'app usa un colore caldo crema `#FAF7F2` privo di abbagliamento; i testi sono in grigio scuro a contrasto elevato invece del nero puro su bianco.
+2. **Evidenziazione Visiva delle Parole Chiave (Color Chips)**: Sia nelle schede **Scopri** che nelle domande della **Sfida**, le parole e le formule chiave della presentazione e della descrizione fisica (*tall, short, curly, straight, Economics, Law, best friend, etc.*) sono racchiuse dentro badge colorati ad alto contrasto (giallo, azzurro, verde, arancione, viola) per facilitare la memoria visiva e la focalizzazione della lettura.
+3. **Tipografia Specificamente Progettata**: Utilizzo del font Google *Atkinson Hyperlegible*, sviluppato per la dislessia e l'ipovisione, integrato con uno *letter-spacing* ampio e una *line-height* aumentata a 1.75 per eliminare l'affollamento visivo.
+4. **Indicatori Doppi e Accessibili (Visual Feedback)**: Tutti i feedback mostrano sia il colore che il simbolo distintivo in grande scala (**✓ Spunta verde** per le risposte corrette e **✗ Croce rossa** per le risposte errate).
